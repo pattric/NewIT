@@ -6,3 +6,5 @@ matplotlib
 pandas
 tensorflow
 keras
+h5py
+flask
