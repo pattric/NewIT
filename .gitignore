@@ -1,0 +1,5 @@
+POC/EAT/.ipynb_checkpoints
+POC/EAT/data
+POC/EAT/__pycache__
+*.pyc
+*.h5

@@ -1,0 +1,10 @@
+######## example-requirements.txt ########
+###### Requirements without Version Specifiers ######
+xlrd >= 0.9.0
+numpy
+matplotlib
+pandas
+tensorflow
+keras
+h5py
+flask
