@@ -5,15 +5,17 @@ networks:
 
 services:
   eat.ai.webapi:
+    container_name: eat.ai.webapi
     image: tensorflow/tensorflow:latest-py3
     environment:
       - FLASK_APP=app.py
+    working_dir: '/usr/local/code'
     ports:
       - "8088:5000"
-    command: sh -c '/usr/local/eat/start.sh'
+    tty: true
     volumes:
-      - .:/usr/local/eat
-    container_name: eat.ai.webapi
+      - .:/usr/local/code
+    command: /usr/local/code/start.sh
     networks:
       - basic
 

@@ -19,8 +19,8 @@ dir = os.path.dirname(__file__)
 class RNN_LSTM_Model():
 
     def __init__ (self):
-        self.model = self.load_model(dir+'\keras-LSTM-1-layer-len80-acc7447.h5')
-        self.word_to_index, self.index_to_word, self.word_to_vec_map = self.read_glove_vecs(dir+'\data\glove.6B.50d.txt')
+        self.model = self.load_model(dir+'/keras-LSTM-1-layer-len80-acc7447.h5')
+        self.word_to_index, self.index_to_word, self.word_to_vec_map = self.read_glove_vecs(dir+'/data/glove.6B.50d.txt')
     
     def sentences_to_indices(self, X, word_to_index, max_len):
         m = X.shape[0]                                   # number of training examples
