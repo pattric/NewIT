@@ -9,13 +9,13 @@ services:
     image: tensorflow/tensorflow:latest-py3
     environment:
       - FLASK_APP=app.py
-    working_dir: '/usr/local/code'
+    working_dir: '/usr/local/eat'
     ports:
       - "8088:5000"
     tty: true
     volumes:
-      - .:/usr/local/code
-    command: /usr/local/code/start.sh
+      - /usr/local/eat:/usr/local/eat
+    command: /usr/local/eat/start.sh
     networks:
       - basic
 
