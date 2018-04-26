@@ -7,16 +7,19 @@ update() {
 }
 
 downloadCode() {
+  cd /tmp
   git clone https://github.com/pattric/NewIT.git
-  cp -rf NewIT/POC/EAT /usr/local/
+  cd NewIT/POC
+  cp -rf EAT /usr/local/
 }
 installPackage()
 {
+    cd /usr/local/EAT
     pip3 install -r requirements.txt
 }
 
 launchApp(){
-    cd /usr/local/eat
+    cd /usr/local/EAT
     ls
     python3 app.py
 }
